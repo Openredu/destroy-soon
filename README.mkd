@@ -11,7 +11,7 @@ DestroySoon uses [DelayedJob](https://github.com/collectiveidea/delayed_job) as 
 Add DestroySoon to your gemfile:
 
 ```ruby
-gem 'destroy_soon', :git => 'git://github.com/redu/destroy-soon.git'
+gem 'destroy_soon', git: 'git://github.com/Openredu/destroy-soon.git'
 ```
 
 You just need to inject some behaivor to the object you want to destroy asynchronously:
@@ -33,7 +33,7 @@ Edit the migration to add the column:
 ```ruby
 class AddDestroySoonToCourse < ActiveRecord::Migration
   def self.up
-    add_column :courses, :destroy_soon, :boolean, :default => false
+    add_column :courses, :destroy_soon, :boolean, default: false
     add_index :courses, :destroy_soon
   end
 
