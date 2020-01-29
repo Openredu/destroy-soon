@@ -3,7 +3,7 @@ require "active_record"
 module DestroySoon::ModelAdditions
   extend ActiveSupport::Concern
   included do
-    scope :will_not_be_destroyed, where(:destroy_soon => false)
+    scope :will_not_be_destroyed, -> { where(:destroy_soon => false) }
   end
 
   def async_destroy
