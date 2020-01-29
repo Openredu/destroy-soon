@@ -6,8 +6,8 @@ ActiveRecord::Schema.define do
   end
 
   create_table "delayed_jobs" do |t|
-    t.integer  "priority",   :default => 0
-    t.integer  "attempts",   :default => 0
+    t.integer  "priority",   default: 0
+    t.integer  "attempts",   default: 0
     t.text     "handler"
     t.text     "last_error"
     t.datetime "run_at"
@@ -21,6 +21,6 @@ ActiveRecord::Schema.define do
 
   create_table "users" do |t|
     t.string :name
-    t.boolean :destroy_soon, :default => false
+    t.boolean :destroy_soon, default: false
   end
 end

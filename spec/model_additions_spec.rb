@@ -11,7 +11,7 @@ module DestroySoon
       Delayed::Job.destroy_all
     end
     let(:subject) do
-      User.create(:name => "Call me susy")
+      User.create(name: "Call me susy")
     end
 
     it "should have a marked_for_destruction attr" do

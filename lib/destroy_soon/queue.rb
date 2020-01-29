@@ -10,7 +10,7 @@ module DestroySoon
 
     def enqueue(job)
       args = [job]
-      args << { :queue => @queue } if @queue
+      args << { queue: @queue } if @queue
 
       Delayed::Job.enqueue(*args)
     end
